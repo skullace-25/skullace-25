@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="190" viewBox="0 0 360 190" role="img" aria-label="Live system status panel">
+  <defs>
+    <linearGradient id="barGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0077ff"/>
+      <stop offset="100%" stop-color="#00e5ff"/>
+    </linearGradient>
+    <style>
+      .mono { font-family: 'Fira Code', 'Cascadia Code', Menlo, Consolas, monospace; }
+      .pulse-dot { animation: pulseDot 1.8s ease-in-out infinite; }
+      @keyframes pulseDot { 0%, 100% { opacity: 1; } 50% { opacity: 0.25; } }
+    </style>
+  </defs>
+
+  <rect x="1" y="1" width="358" height="188" rx="10" fill="#0d1117" stroke="#1f6feb" stroke-opacity="0.5"/>
+
+  <circle class="pulse-dot" cx="22" cy="26" r="5" fill="#00e5ff"/>
+  <text x="36" y="30" fill="#e6edf3" font-size="12" letter-spacing="2" class="mono">SYSTEM STATUS</text>
+  <text x="338" y="30" text-anchor="end" fill="#00e5ff" font-size="11" class="mono">LIVE</text>
+
+  <g class="mono" font-size="12">
+    <!-- CPU -->
+    <text x="20" y="62" fill="#8b949e">CPU</text>
+    <rect x="70" y="52" width="220" height="8" rx="4" fill="#161b22"/>
+    <rect x="70" y="52" width="136" height="8" rx="4" fill="url(#barGrad)">
+      <animate attributeName="width" values="120;150;136;142;136" dur="4s" repeatCount="indefinite"/>
+    </rect>
+    <text x="300" y="62" fill="#c9d1d9">62%</text>
+
+    <!-- Memory -->
+    <text x="20" y="92" fill="#8b949e">MEM</text>
+    <rect x="70" y="82" width="220" height="8" rx="4" fill="#161b22"/>
+    <rect x="70" y="82" width="106" height="8" rx="4" fill="url(#barGrad)">
+      <animate attributeName="width" values="100;112;106;104;106" dur="5s" repeatCount="indefinite"/>
+    </rect>
+    <text x="300" y="92" fill="#c9d1d9">48%</text>
+
+    <!-- Network -->
+    <text x="20" y="122" fill="#8b949e">NET</text>
+    <rect x="70" y="112" width="220" height="8" rx="4" fill="#161b22"/>
+    <rect x="70" y="112" width="172" height="8" rx="4" fill="url(#barGrad)">
+      <animate attributeName="width" values="160;180;172;176;172" dur="3.5s" repeatCount="indefinite"/>
+    </rect>
+    <text x="300" y="122" fill="#c9d1d9">78%</text>
+
+    <!-- Disk -->
+    <text x="20" y="152" fill="#8b949e">DISK</text>
+    <rect x="70" y="142" width="220" height="8" rx="4" fill="#161b22"/>
+    <rect x="70" y="142" width="77" height="8" rx="4" fill="url(#barGrad)">
+      <animate attributeName="width" values="74;80;77;76;77" dur="6s" repeatCount="indefinite"/>
+    </rect>
+    <text x="300" y="152" fill="#c9d1d9">35%</text>
+  </g>
+
+  <text x="20" y="180" fill="#00e5ff" font-size="11" class="mono">● ALL SYSTEMS OPERATIONAL</text>
+</svg>
