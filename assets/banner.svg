@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="300" viewBox="0 0 820 300" role="img" aria-label="Terminal window">
+  <defs>
+    <linearGradient id="borderGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0077ff"/>
+      <stop offset="50%" stop-color="#00bfff"/>
+      <stop offset="100%" stop-color="#00e5ff"/>
+    </linearGradient>
+    <style>
+      .term-font { font-family: 'Fira Code', 'Cascadia Code', Menlo, Consolas, 'Courier New', monospace; }
+      .line { opacity: 0; animation: fadeIn 0.5s ease forwards; }
+      @keyframes fadeIn { to { opacity: 1; } }
+      .cursor { animation: blink 1s step-end infinite; }
+      @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+    </style>
+  </defs>
+
+  <!-- Terminal window -->
+  <rect x="10" y="10" width="800" height="280" rx="12" fill="#0d1117" stroke="url(#borderGlow)" stroke-opacity="0.5" stroke-width="1.5"/>
+
+  <!-- Title bar -->
+  <rect x="10" y="10" width="800" height="36" rx="12" fill="#161b22"/>
+  <rect x="10" y="30" width="800" height="16" fill="#161b22"/>
+  <circle cx="34" cy="28" r="6" fill="#ff5f56"/>
+  <circle cx="56" cy="28" r="6" fill="#ffbd2e"/>
+  <circle cx="78" cy="28" r="6" fill="#27c93f"/>
+  <text x="410" y="33" text-anchor="middle" fill="#8b949e" font-size="13" class="term-font">sandeep@skullace: ~</text>
+
+  <!-- Terminal lines -->
+  <g class="term-font" font-size="16">
+    <g class="line" style="animation-delay: 0.3s">
+      <text x="34" y="80" fill="#00bfff">$</text>
+      <text x="54" y="80" fill="#e6edf3">whoami</text>
+    </g>
+    <g class="line" style="animation-delay: 0.8s">
+      <text x="54" y="110" fill="#c9d1d9">Sandeep S Rajesh — IT Infrastructure Administrator</text>
+    </g>
+    <g class="line" style="animation-delay: 1.3s">
+      <text x="34" y="142" fill="#00bfff">$</text>
+      <text x="54" y="142" fill="#e6edf3">cat skills.txt</text>
+    </g>
+    <g class="line" style="animation-delay: 1.8s">
+      <text x="54" y="172" fill="#c9d1d9">Linux | RHEL | AWS | Docker | Kubernetes</text>
+    </g>
+    <g class="line" style="animation-delay: 2.1s">
+      <text x="54" y="198" fill="#c9d1d9">Networking | Automation | Cybersecurity</text>
+    </g>
+    <g class="line" style="animation-delay: 2.6s">
+      <text x="34" y="230" fill="#00bfff">$</text>
+      <text x="54" y="230" fill="#e6edf3">echo</text>
+      <text x="104" y="230" fill="#00e5ff">"Building. Automating. Securing."</text>
+    </g>
+    <g class="line" style="animation-delay: 3.1s">
+      <text x="34" y="262" fill="#00bfff">$</text>
+      <rect class="cursor" x="54" y="249" width="10" height="18" fill="#00bfff"/>
+    </g>
+  </g>
+</svg>
